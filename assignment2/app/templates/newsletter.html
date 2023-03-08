@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+<!-- News Letter forms -->
+{% block content %}
+<main class="main">
+	<div class="case">
+		<section class="sheet">
+			<form class="form" onsubmit="return validateForm(this)">
+				<div class="form-group">
+					<label for="fullname" class="input-label">Fullname</label>
+					<input id="fullname" type="text" name="fullname" class="input-field" placeholder="Input name">
+					<span class="input-check">
+						<i class="fas fa-check-circle"></i>
+						<i class="fas fa-exclamation-circle"></i>
+					</span>
+					<small class="input-alert"></small>
+				</div>
+				<div class="form-group">
+					<label for="email" class="input-label">Email</label>
+					<input id= "email" type="email" name="email" class="input-field" placeholder="Input email">
+					<span class="input-check">
+						<i class="fas fa-check-circle"></i>
+						<i class="fas fa-exclamation-circle"></i>
+					</span>
+					<small class="input-alert"></small>
+				</div>
+				
+				<div class="form-group">
+					<label for="products" class="input-label">Product Interests</label>
+					<select id ="products">
+  					<option selected>Vanilla Slice</option>
+  					<option> Donuts</option>
+  					<option>Custard Tart</option>
+  					<option>Randy Tart</option>
+  					<option>Apple Cake Slice</option>
+  					<option>Raspberry Cheesecake</option>
+  					<option>French Country Bread</option>
+  					<option>New England Brown Bread</option>
+  					<option>Red Velvet Classic American Cake</option>
+					</select>
+					<span class="input-check">
+						<i class="fas fa-check-circle"></i>
+						<i class="fas fa-exclamation-circle"></i>
+					</span>
+					<small class="input-alert"></small>
+				</div>
+				<div class="form-group">
+					<label for="birthday" class="input-label">Birthday</label>
+					<input id="birthday" type="date" name="birthday" class="input-label">
+					<span class="input-check">
+						<i class="fas fa-check-circle"></i>
+						<i class="fas fa-exclamation-circle"></i>
+					</span>
+					<small class="input-alert"></small>
+				</div>
+				<div class="form-group">
+					<label for="box" class="input-label">Receive emails</label>
+					<input type="checkbox" name="box" class="input-label">
+	
+				    <small class="input-alert"></small>
+				</div>
+				<div class="form-group">
+					<label for="message" class="input-label">Message</label>
+					<textarea name="message" class="input-field" rows="3" placeholder="Input Messages" ></textarea>
+					<span class="input-check">
+						<i class="fas fa-check-circle"></i>
+						<i class="fas fa-exclamation-circle"></i>
+					</span>
+					<small class="input-alert"></small>
+				</div>
+				<div id="text"></div>
+				<div class="form-group">
+					<input onclick=clickme() type="button" class="submitbox" value="Print Inputs">
+				</div>
+				<div class="form-group">
+					<input type="submit" class="submitbox" value="Submit">
+				</div>
+				
+			</form>
+		</section>
+	</div>
+</main>
+{% endblock %}

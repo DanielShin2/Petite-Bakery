@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+
+{% block content %}
+      
+    
+<div>
+  
+  <img src="{{url_for('.static', filename='Images/specialsBanner.jpg')}}" width="100%">
+  <h1 style="text-align: center;">
+  Weekly Specials!
+</h1>
+<div style="text-align: center;">
+  <h2>Petite Treats has a very special menu which is updated every week and sell within limited amounts. And they are available </h2>
+  <h2>"In Store Only"</h2>
+<h2>Sign up now to register your name for the weekly specials before they run out! </h2>
+</div>
+</div>
+<div style="text-align: center;">
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up For Weekly Specials</button>
+</div>
+
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/registered">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to make an order of weekly specials</p>
+      <hr>
+      <label for="orderdetails"><b>Name</b></label>
+      <input type="text" placeholder="Enter Your Name" name="name" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="orderdetails"><b>Order Details</b></label>
+      <input type="text" placeholder="Fill in Details information on order(item name, quality, pickup/delivery, ...etc)" name="orderdetails" required>
+      
+     <br>
+<label for="Date of Birth"><b>Date of Birth</b></label>
+						<select name="Month">
+						<option value="month"> Month </option>
+						<option value="Jan"> January </option>
+						<option value="Feb"> Feberary </option>
+						<option value="Mar"> March </option>
+						<option value="Apr"> April </option>
+						<option value="May"> May </option>
+						<option value="Jun"> June </option>
+						<option value="Jul"> July </option>
+						<option value="Aug"> August </option>
+						<option value="Sep"> September </option>
+						<option value="Oct"> October </option>
+						<option value="Nov"> November </option>
+						<option value="Dec"> December </option>
+						</select>
+						<select name="Days">
+						<option value="days">Days</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20></option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						<option value="31">31</option>
+						</select>
+						<select name="Years">
+						<option value="years">Years</option>
+						<option value="2020">2020 </option>
+						<option value="2019"> 2019</option>
+						<option value="2018">2018 </option>
+						<option value="2017">2017 </option>
+						<option value="2016">2016 </option>
+						<option value="2015">2015 </option>
+						<option value="2014">2014 </option>
+						<option value="2013">2013 </option>
+						<option value="2012">2012 </option>
+						<option value="2011">2011 </option>
+						<option value="2000">2000 </option>
+						<option value="1999">1999 </option>
+						<option value="1998">1998 </option>
+						<option value="1997">1997 </option>
+						<option value="1996"> 1996</option>
+						<option value="1995">1995</option>
+						</select>
+					    <br>
+					    
+					 <div class="form-group">
+					<label for="products" class="input-label">Product Interests</label>
+					<select id ="products">
+  					<option selected>Vanilla Slice</option>
+  					<option> Donuts</option>
+  					<option>Custard Tart</option>
+  					<option>Randy Tart</option>
+  					<option>Apple Cake Slice</option>
+  					<option>Raspberry Cheesecake</option>
+					</select>
+					<span class="input-check">
+						<i class="fas fa-check-circle"></i>
+						<i class="fas fa-exclamation-circle"></i>
+					</span>
+					<small class="input-alert"></small>
+				</div>
+				
+				<div class="form-group">
+					<label for="box" class="input-label">Receive emails</label>
+					<input type="checkbox" name="box" class="input-label">
+	
+				    <small class="input-alert"></small>
+				</div>
+
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button id="signupbutton" type="submit" class="signupbtn">Sign Up</button>
+      
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+<script>
+
+var modal = document.getElementById('id01');
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<div id="specialscontainer">
+  <table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+
+    <td> <img src="{{url_for('.static', filename='Images/OreoCakeSlice.png')}}" style="float: left;"> </td>
+    <td id="specialTextLeft"> 
+      <h2>Oreo Cake Slice</h2> 
+      <h3>25% OFF</h3> 
+      <h4> <strike>$5.0</strike>  $3.75</h4>
+       <p>
+         New receipe of the week! Chocolate cake mixed with oreos inside and outside. Who won't wanna taste an oreo cake 😉
+       </p>
+    </td> 
+    
+
+  </tr>
+
+</table>
+
+</div>
+
+<div id="specialscontainer">
+  <table>
+  <tr>
+    <th></th>
+    <th></th>
+
+  </tr>
+  <tr>
+
+    
+    <td id="specialTextRight"> 
+      <h2>Morning set</h2> 
+      <h3>25% OFF</h3> 
+      <h4> <strike>$7.0</strike>  $5.25</h4>
+       <p>
+         Creamy coffee with a cake slice; The best set for wokers and students to start their day fresh.
+       </p>
+    </td> 
+    <td> <img src="{{url_for('.static', filename='Images/MorningSet.png')}}" style="float: right;"> </td>
+    
+
+  </tr>
+
+</table>
+
+</div>
+
+<div id="specialscontainer">
+  <table>
+  <tr>
+    <th></th>
+    <th></th>
+
+  </tr>
+  <tr>
+
+    <td> <img src="{{url_for('.static', filename='Images/IcecreamWaffle.png')}}" style="float: left;"> </td>
+    <td id="specialTextLeft"> 
+      <h2>Icecream Waffle</h2> 
+      <h3>25% OFF</h3> 
+      <h4> <strike>$4.55</strike>  $3.40</h4>
+       <p>
+         Heard a rumor icecream waffle is available? Yes, it is available in Petite Treats from this week on.
+       </p>
+    </td> 
+    
+
+  </tr>
+
+</table>
+
+</div>
+<div id="specialscontainer">
+  <table>
+  <tr>
+    <th></th>
+    <th></th>
+
+  </tr>
+  <tr>
+
+    
+    <td id="specialTextRight"> 
+      <h2>Cranberry Brownies</h2> 
+      <h3>25% OFF</h3> 
+      <h4> <strike>$8.5</strike> $6.35</h4>
+       <p>
+         Chef Danny has been making some new recipes including this Cranberry Brownies.
+       </p>
+    </td> 
+    <td> <img src="{{url_for('.static', filename='Images/Cranberry Brownies.png')}}" style="float: right;"> </td>
+    
+
+  </tr>
+
+</table>
+
+</div>
+</div>
+
+</body>
+{% endblock %}

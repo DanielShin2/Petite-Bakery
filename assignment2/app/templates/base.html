@@ -1,0 +1,52 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Petite Treats</title>
+      {% else %}
+      <title>Welcome to Petite Treats</title>
+      {% endif %}
+      <!-- add the right css file -->
+        {% block styles %}
+    
+        <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='My_style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='Sign_upform.css')}}">
+            
+
+      
+
+        {% endblock %}
+    </head>
+    <body>
+        
+            <div class="nav-btn">
+              <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+                  
+            
+        <div id="logo">
+		<img src="{{url_for('.static', filename='Images/logo.png')}}" width="200" height="200">
+  </div>
+      
+      
+<ul class="topnav">
+  <li><a href="/index">Home</a></li>
+  <li><a href="/menu">Menu</a></li>
+  <li><a class="active" href="/about">About</a></li>
+  <li><a class="RED" href="/specials">WeeklySpecials</a>
+
+</ul>
+        {% block content %}{% endblock %}
+        
+        
+<div>
+	<footer>
+	<p>Contacts:0455 5555 555, Catering:0433 3333 333, Address:123 Prize Lane, Kirwan, QLD</p>
+</footer>
+</div>
+
+    </body>
+</html>

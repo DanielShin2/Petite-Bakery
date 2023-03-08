@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="menuborder">
+  
+<div class="container">
+  <img src="{{url_for('.static', filename='Images/Menu.jpg')}}" alt="menubanner" style="width:100%;">
+  <div style="text-align: center;">
+    <h1>Menu</h1>
+  </div>
+</div>
+
+  <div class="row">
+  <div class="column">
+    <img src="{{url_for('.static', filename='Images/donuts.png')}}" style="width: 100%"  >
+   
+  </div>
+  <div class="column">
+    <img src="{{url_for('.static', filename='Images/VanillaSlice.png')}}"  style="width:100%">
+   
+  </div>
+  <div class="column">
+    <img src="{{url_for('.static', filename='Images/RandyTart.png')}}" style="width:100%">
+  </div>
+  <div class="textrow">
+  <div class="textcolumn">
+    <h2>Donuts</h2>
+    <p>Price: $4.50</p>
+   <a class="Anibutton" href="/donuts" class="noDecor"><span>Read More</span></a>
+  </div>
+  <div class="textcolumn">
+    <h2>Vanilla Slice</h2>
+    <p>Price: $4.50</p>
+    <a class="Anibutton" href="/vanillaslice" class="noDecor"><span>Read More</span></a>
+  </div>
+  <div class="textcolumn">
+    <h2>Randy Tart</h2>
+    <p>Price: $3.95</p>
+    <a class="Anibutton" href="/randytart" class="noDecor"><span>Read More</span></a>
+  </div>
+</div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <img src="{{url_for('.static', filename='Images/CustardTart.png')}}"  style="width:100%">
+   
+  </div>
+  <div class="column">
+    <img src="{{url_for('.static', filename='Images/RaspberryCheeseCake.png')}}"  style="width:100%">
+   
+  </div>
+  <div class="column">
+    <img src="{{url_for('.static', filename='Images/AppleCakeSlice.png')}}" style="width:100%">
+  </div>
+  <div class="textrow">
+  <div class="textcolumn">
+    <h2>Custard tart</h2>
+    <p>Price: $3.95</p>
+    <a class="Anibutton" href="/custardtart" class="noDecor"><span>Read More</span></a>
+  </div>
+  <div class="textcolumn">
+    <h2>Raspberry cheesecake </h2>
+    <p>Price: $5.50</p>
+    <a class="Anibutton" href="/raspberrycheesecake" class="noDecor"><span>Read More</span></a>
+  </div>
+  <div class="textcolumn">
+    <h2> Apple Cake Slice </h2>
+    <p>Price: $5.50</p>
+   <a class="Anibutton" href="/applecakeslice" class="noDecor"><span>Read More</span></a>
+  </div>
+</div>
+</div>
+
+  <div>
+    
+  </div>
+</div>
+
+</body>
+{% endblock %}
