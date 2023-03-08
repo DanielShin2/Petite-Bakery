@@ -1,5 +1,9 @@
 # Assignment 2 - Milestone 1 
 
+
+Deployment site : https://danielshin2.github.io/Petite-Bakery/
+
+
 Committing from cloud9
 
 
